@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
       filename: 'bundle.[contenthash].js',
       assetModuleFilename: 'assets/[hash][ext][query]',
       clean: true,
-      publicPath: '/',
+      publicPath: isProd ? '/helpdesk-frontend/' : '/',
     },
     module: {
       rules: [
