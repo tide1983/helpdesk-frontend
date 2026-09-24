@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #fafafa;
+  background-image:
+    linear-gradient(#eaeaea 1px, transparent 1px),
+    linear-gradient(90deg, #eaeaea 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+/* ---------- Кнопки ---------- */
+
+.btn {
+  padding: 10px 22px;
+  border: 1px solid #333;
+  background: #fff;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #222;
+  transition: background-color 0.15s ease;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: background-color 0.15s ease;
+}
+
+.btn-icon:hover {
+  background: #f0f0f0;
+}
+
+/* ---------- Список тикетов ---------- */
+
+.ticket {
+  display: grid;
+  grid-template-columns: 28px 1fr auto auto auto;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #333;
+  padding: 16px 20px;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.ticket:hover {
+  background: #fcfcfc;
+}
+
+.ticket__check {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: transparent;
+  flex-shrink: 0;
+}
+
+.ticket__check.done {
+  color: #222;
+}
+
+.ticket__name {
+  font-size: 15px;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticket__name.done {
+  color: #999;
+}
+
+.ticket__date {
+  font-size: 13px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.ticket__desc {
+  grid-column: 2 / -1;
+  padding: 12px 0 4px;
+  font-size: 14px;
+  color: #333;
+  white-space: pre-line;
+  line-height: 1.5;
+  border-top: 1px dashed #ccc;
+  margin-top: 10px;
+}
+
+/* ---------- Модальные окна ---------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.modal {
+  background: #fff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  min-width: 380px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+  margin: 0 0 20px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  color: #222;
+}
+
+.modal p {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.modal label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #222;
+  outline: none;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  border-color: #333;
+}
+
+.modal textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* ---------- Прочее ---------- */
+
+.loader {
+  text-align: center;
+  padding: 32px;
+  color: #666;
+  font-size: 14px;
+}
+
+.empty {
+  text-align: center;
+  padding: 32px;
+  color: #666;
+  font-size: 14px;
+}
